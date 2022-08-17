@@ -24,8 +24,6 @@ jobs:
       run: sudo apt-get update
     - name: Install c8y
       run: sudo apt-get install go-c8y-cli
-    - name: Adding source
-      run: source "/etc/go-c8y-cli/shell/c8y.plugin.sh"
     - shell: bash
       env:
         C8Y_HOST: ${{ secrets.C8Y_HOST }}
