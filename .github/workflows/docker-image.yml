@@ -40,5 +40,5 @@ jobs:
       run: zip my-microservice-name cumulocity.json image.tar
     - name: Uploading Microservice 
       run: |
-      eval $(c8y sessions set --shell bash --session /home/runner/.cumulocity/actions.json)
-      c8y microservices create --file my-microservice-name.zip
+        eval $(c8y sessions set --shell bash --session /home/runner/.cumulocity/actions.json)
+        c8y microservices create --file my-microservice-name.zip
