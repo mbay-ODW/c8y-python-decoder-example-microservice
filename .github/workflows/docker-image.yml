@@ -30,8 +30,6 @@ jobs:
         C8Y_PW: ${{ secrets.C8Y_PW }}
         C8Y_USER: ${{ secrets.C8Y_USER }}
       run: c8y sessions create --type dev --host "https://${C8Y_HOST}" --username "${C8Y_USER}" --password "${C8Y_PW}" --name actions
-    - name: print env
-      run: printenv
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-microservice-name
     - name: Saving Container

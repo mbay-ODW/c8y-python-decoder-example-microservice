@@ -55,4 +55,5 @@ def environment():
     return jsonify(environment_data)
 
 if __name__ == '__main__':
+    logger.info("Geiler typ der Marco")
     app.run(host='0.0.0.0', port=80)
